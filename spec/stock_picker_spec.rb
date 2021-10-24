@@ -1,4 +1,5 @@
 require_relative "../lib/stock_picker"
+require_relative "../lib/stock_picker_imperative"
 
 describe "stock_picker" do
   describe "#stock_picker" do
@@ -56,4 +57,14 @@ describe "stock_picker" do
     end
   end
 
+end
+
+describe "stock_picker_imperative" do
+  describe "#stock_picker" do
+    it "returns the pair of days that gives the most profit" do
+      input = [17,3,6,9,15,8,6,1,10]
+      expected = [1,4]
+      expect(stock_picker(input)).to eql(expected)
+    end
+  end
 end
